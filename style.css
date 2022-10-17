@@ -1,0 +1,22 @@
+
+.divButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.button {
+    width: 5rem;
+    height: 5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+button{
+    font-size: 2rem;
+}
+
