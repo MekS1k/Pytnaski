@@ -1,6 +1,7 @@
 var arr = [1, 2, 3, 4, 5, 6,7,8]//массив чисел
 var arr2 = []
 var buttons = document.querySelectorAll('.button')
+var nulle = document.getElementById('b8')
 
 function getrandom() //функция для получения рандомного числа
 {
@@ -17,6 +18,7 @@ function getrandom() //функция для получения рандомно
 
 function pushrand() //записываем число в кнопку
 {
+  nulle.textContent = '' // убираем текст из кнопки , которая была пустой, но после замены перестала быть пустой
   buttons.forEach(element => //перебираем все кнопки
   {
     let random = getrandom() // присваиваем переменной рандомные числа
