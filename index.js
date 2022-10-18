@@ -1,7 +1,16 @@
 var arr = [1, 2, 3, 4, 5, 6,7,8]//массив чисел
 var arr2 = []
 var buttons = document.querySelectorAll('.button')
-var nulle = document.getElementById('b8')
+var nulle = document.querySelector('.buttonNull')
+var b0 = document.querySelector('#b0')
+var b1 = document.querySelector('#b1')
+var b2 = document.querySelector('#b2')
+var b3 = document.querySelector('#b3')
+var b4 = document.querySelector('#b4')
+var b5 = document.querySelector('#b5')
+var b6 = document.querySelector('#b6')
+var b7 = document.querySelector('#b7')
+var b8 = document.querySelector('#b8')
 
 function getrandom() //функция для получения рандомного числа
 {
@@ -18,13 +27,14 @@ function getrandom() //функция для получения рандомно
 
 function pushrand() //записываем число в кнопку
 {
-  nulle.textContent = '' // убираем текст из кнопки , которая была пустой, но после замены перестала быть пустой
+   nulle.textContent = ''
   buttons.forEach(element => //перебираем все кнопки
   {
     let random = getrandom() // присваиваем переменной рандомные числа
     element.innerHTML = arr[random] // присваиваем тексту кнопки рандомный выпавший индекс
   })
   arr2 = [];
+  
 }
 
  function swap(index) // функция для перемещения кнопок
@@ -32,9 +42,6 @@ function pushrand() //записываем число в кнопку
     switch(index)
     {
       case 0:
-        var b0 = document.getElementById("b0")
-        var b1 = document.getElementById("b1")
-        var b3 = document.getElementById("b3")
         if(b1.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b1.innerHTML = b0.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -48,10 +55,6 @@ function pushrand() //записываем число в кнопку
         
           break
       case 1:
-        var b0 = document.getElementById("b0")
-        var b1 = document.getElementById("b1")
-        var b2 = document.getElementById("b2")
-        var b4 = document.getElementById("b4")
         if(b0.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b0.innerHTML = b1.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -69,9 +72,6 @@ function pushrand() //записываем число в кнопку
         }
         break
         case 2:
-        var b2 = document.getElementById("b2")
-        var b1 = document.getElementById("b1")
-        var b5 = document.getElementById("b5")
         if(b1.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b1.innerHTML = b2.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -85,10 +85,6 @@ function pushrand() //записываем число в кнопку
         
           break
           case 3:
-        var b0 = document.getElementById("b0")
-        var b6 = document.getElementById("b6")
-        var b3 = document.getElementById("b3")
-        var b4 = document.getElementById("b4")
         if(b0.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b0.innerHTML = b3.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -106,11 +102,6 @@ function pushrand() //записываем число в кнопку
         }
         break
         case 4:
-        var b1 = document.getElementById("b1")
-        var b3 = document.getElementById("b3")
-        var b5 = document.getElementById("b5")
-        var b4 = document.getElementById("b4")
-        var b7 = document.getElementById("b7")
         if(b1.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b1.innerHTML = b4.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -133,10 +124,6 @@ function pushrand() //записываем число в кнопку
         }
         break
         case 5:
-      var b2 = document.getElementById("b2")
-      var b8 = document.getElementById("b8")
-      var b5 = document.getElementById("b5")
-      var b4 = document.getElementById("b4")
       if(b2.innerHTML == '')//проверяем является ли ячейка пустой
       {
          b2.innerHTML = b5.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -154,9 +141,6 @@ function pushrand() //записываем число в кнопку
       }
       break
       case 6:
-        var b6 = document.getElementById("b6")
-        var b7 = document.getElementById("b7")
-        var b3 = document.getElementById("b3")
         if(b7.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b7.innerHTML = b6.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -167,13 +151,8 @@ function pushrand() //записываем число в кнопку
            b3.innerHTML = b6.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
            b6.innerHTML = '' // присваем кнопке под индексом 0 пустоту
         }
-        
           break
       case 7:
-        var b6 = document.getElementById("b6")
-        var b8 = document.getElementById("b8")
-        var b7 = document.getElementById("b7")
-        var b4 = document.getElementById("b4")
         if(b6.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b6.innerHTML = b7.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -191,9 +170,6 @@ function pushrand() //записываем число в кнопку
         }
         break
         case 8:
-        var b7 = document.getElementById("b7")
-        var b8 = document.getElementById("b8")
-        var b5 = document.getElementById("b5")
         if(b7.innerHTML == '')//проверяем является ли ячейка пустой
         {
            b7.innerHTML = b8.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
@@ -204,6 +180,11 @@ function pushrand() //записываем число в кнопку
            b5.innerHTML = b8.innerHTML // меняем кнопку под индексом 1 на кнопку под индексом 0
            b8.innerHTML = '' // присваем кнопке под индексом 0 пустоту
         }
+        
           break
     }
-}
+    if(b0.innerHTML == 1 && b1.innerHTML == 2 && b2.innerHTML == 3 && b3.innerHTML == 4 && b4.innerHTML == 5 && b5.innerHTML == 6 && b6.innerHTML == 7 && b7.innerHTML == 8)
+    {
+       alert ("Вы выйграли")
+    }
+    }
